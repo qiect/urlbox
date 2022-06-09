@@ -1,7 +1,7 @@
 {
-  "name": "@wcj/fed",
+  "name": "@chet",
   "version": "1.0.0",
-  "description": "前端导航",
+  "description": "好文",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,9 +17,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaywcjlove/FED.git"
+    "url": "https://github.com/qiect/fais.git"
   },
-  "author": "kenny wang <wowohoo@qq.com>",
+  "author": "chet <qctvip@vip.163.com>",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "10.3.7",
