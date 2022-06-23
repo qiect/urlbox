@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Haowen.HttpApi</name>
+    </assembly>
+    <members>
+        <member name="M:Haowen.Controllers.AuthController.GetLoginAddressAsync">
+            <summary>
+            获取登录地址(GitHub)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Haowen.Controllers.AuthController.GetAccessTokenAsync(System.String)">
+            <summary>
+            获取AccessToken
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Haowen.Controllers.AuthController.GenerateTokenAsync(System.String)">
+            <summary>
+            登录成功，生成Token
+            </summary>
+            <param name="access_token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Haowen.Controllers.HelloWorldController.Exception">
+            <summary>
+            这是一个异常
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Haowen.Controllers.TestController.InsertTestAsync(Haowen.TestDto)">
+            <summary>
+            添加Test
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Haowen.Controllers.TestController.DeleteTestAsync(System.Guid)">
+            <summary>
+            删除Test
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Haowen.Controllers.TestController.UpdateTestAsync(System.Guid,Haowen.TestDto)">
+            <summary>
+            更新Test
+            </summary>
+            <param name="id"></param>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Haowen.Controllers.TestController.GetTestAsync(System.Guid)">
+            <summary>
+            查询Test
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

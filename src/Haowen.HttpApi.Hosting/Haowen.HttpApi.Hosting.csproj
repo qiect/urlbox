@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Haowen</RootNamespace>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\Haowen.BackgroundJobs\Haowen.BackgroundJobs.csproj" />
+    <ProjectReference Include="..\Haowen.Swagger\Haowen.Swagger.csproj" />
+    <ProjectReference Include="..\Haowen.HttpApi\Haowen.HttpApi.csproj" />
+    <ProjectReference Include="..\Haowen.EntityFrameworkCore\Haowen.EntityFrameworkCore.csproj" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.3" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="5.2.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Update="Haowen.Application.Contracts.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Haowen.Domain.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Haowen.HttpApi.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>
