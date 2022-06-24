@@ -4,31 +4,31 @@
         <name>Haowen.HttpApi</name>
     </assembly>
     <members>
-        <member name="M:Haowen.Controllers.ArticleController.InsertTestAsync(Haowen.ArticleDto)">
+        <member name="M:Haowen.Controllers.ArticleController.InsertArticleAsync(Haowen.ArticleDto)">
             <summary>
-            添加Test
+            添加Article
             </summary>
             <param name="dto"></param>
             <returns></returns>
         </member>
-        <member name="M:Haowen.Controllers.ArticleController.DeleteTestAsync(System.Guid)">
+        <member name="M:Haowen.Controllers.ArticleController.DeleteArticleAsync(System.Guid)">
             <summary>
-            删除Test
+            删除Article
             </summary>
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:Haowen.Controllers.ArticleController.UpdateTestAsync(System.Guid,Haowen.ArticleDto)">
+        <member name="M:Haowen.Controllers.ArticleController.UpdateArticleAsync(System.Guid,Haowen.ArticleDto)">
             <summary>
-            更新Test
+            更新Article
             </summary>
             <param name="id"></param>
             <param name="dto"></param>
             <returns></returns>
         </member>
-        <member name="M:Haowen.Controllers.ArticleController.GetTestAsync(System.Guid)">
+        <member name="M:Haowen.Controllers.ArticleController.GetArticleAsync(System.Guid)">
             <summary>
-            查询Test
+            查询Article
             </summary>
             <param name="id"></param>
             <returns></returns>

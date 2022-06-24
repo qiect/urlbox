@@ -14,7 +14,7 @@ namespace Haowen
         /// <summary>
         /// 数据库表前缀
         /// </summary>
-        public const string DbTablePrefix = "chet_";
+        public const string DbTablePrefix = "";
     }
 
     /// <summary>

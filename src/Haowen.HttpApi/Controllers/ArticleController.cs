@@ -14,55 +14,55 @@ namespace Haowen.Controllers
     [Authorize]
     public class ArticleController : AbpController
     {
-        private readonly IArticleService _testService;
+        private readonly IArticleService _ArticleService;
 
-        public ArticleController(IArticleService testService)
+        public ArticleController(IArticleService ArticleService)
         {
-            this._testService = testService;
+            this._ArticleService = ArticleService;
         }
 
         /// <summary>
-        /// 添加Test
+        /// 添加Article
         /// </summary>
         /// <param name="dto"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<ServiceResult<string>> InsertTestAsync([FromBody] ArticleDto dto)
+        public async Task<ServiceResult<string>> InsertArticleAsync([FromBody] ArticleDto dto)
         {
-            return await _testService.InsertTestAsync(dto);
+            return await _ArticleService.InsertArticleAsync(dto);
         }
         /// <summary>
-        /// 删除Test
+        /// 删除Article
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete]
-        public async Task<ServiceResult> DeleteTestAsync([Required] Guid id)
+        public async Task<ServiceResult> DeleteArticleAsync([Required] Guid id)
         {
-            return await _testService.DeleteTestAsync(id);
+            return await _ArticleService.DeleteArticleAsync(id);
         }
 
         /// <summary>
-        /// 更新Test
+        /// 更新Article
         /// </summary>
         /// <param name="id"></param>
         /// <param name="dto"></param>
         /// <returns></returns>
         [HttpPut]
-        public async Task<ServiceResult<string>> UpdateTestAsync([Required] Guid id, [FromBody] ArticleDto dto)
+        public async Task<ServiceResult<string>> UpdateArticleAsync([Required] Guid id, [FromBody] ArticleDto dto)
         {
-            return await _testService.UpdateTestAsync(id, dto);
+            return await _ArticleService.UpdateArticleAsync(id, dto);
         }
 
         /// <summary>
-        /// 查询Test
+        /// 查询Article
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<ServiceResult<ArticleDto>> GetTestAsync([Required] Guid id)
+        public async Task<ServiceResult<ArticleDto>> GetArticleAsync([Required] Guid id)
         {
-            return await _testService.GetTestAsync(id);
+            return await _ArticleService.GetArticleAsync(id);
         }
     }
 }

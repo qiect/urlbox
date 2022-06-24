@@ -10,7 +10,8 @@ namespace Haowen
     {
         public static class DbTableName
         {
-            public const string Tests = "Tests";
+            public const string Articles = "Articles";
+            public const string Tags = "Tags";
         }
     }
 }

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Volo.Abp.Domain.Entities;
 
 namespace Haowen
@@ -31,6 +28,6 @@ namespace Haowen
         /// <summary>
         /// 标签
         /// </summary>
-        public int[] Tags { get; set; }
+        public ICollection<Tag> Tags { get; set; }
     }
 }

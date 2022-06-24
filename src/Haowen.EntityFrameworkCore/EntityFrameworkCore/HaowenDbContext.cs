@@ -13,6 +13,7 @@ namespace Haowen.EntityFrameworkCore
     public class HaowenDbContext : AbpDbContext<HaowenDbContext>
     {
         public DbSet<Article> Articles { get; set; }
+        public DbSet<Tag> Tags { get; set; }
         public HaowenDbContext(DbContextOptions<HaowenDbContext> options) : base(options)
         {
         }
