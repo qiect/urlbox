@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Haowen
 {
-    public class TemplateDbConsts
+    public class HaowenDbConsts
     {
         public static class DbTableName
         {

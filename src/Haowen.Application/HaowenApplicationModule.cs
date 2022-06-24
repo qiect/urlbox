@@ -8,16 +8,16 @@ namespace Haowen;
 [DependsOn(
     typeof(AbpIdentityApplicationModule),
     typeof(AbpAutoMapperModule),
-    typeof(TemplateAppCachingModule)    
+    typeof(HaowenAppCachingModule)    
     )]
-public class TemplateApplicationModule : AbpModule
+public class HaowenApplicationModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
         Configure<AbpAutoMapperOptions>(options =>
         {
-            options.AddMaps<TemplateApplicationModule>(validate: true);
-            options.AddProfile<TemplateAutoMapperProfile>(validate: true);
+            options.AddMaps<HaowenApplicationModule>(validate: true);
+            options.AddProfile<HaowenAutoMapperProfile>(validate: true);
         });
     }
 }

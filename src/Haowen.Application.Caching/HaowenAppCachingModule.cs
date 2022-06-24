@@ -7,9 +7,9 @@ namespace Haowen.Application.Caching
 {
     [DependsOn(
     typeof(AbpCachingModule),
-    typeof(TemplateDomainModule)
+    typeof(HaowenDomainModule)
     )]
-    public class TemplateAppCachingModule : AbpModule
+    public class HaowenAppCachingModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {

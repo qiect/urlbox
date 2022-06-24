@@ -12,11 +12,11 @@ namespace Haowen.Controllers
     [Route("[controller]")]
     [ApiExplorerSettings(GroupName = Grouping.GroupName_Admin)]
     [Authorize]
-    public class TestController : AbpController
+    public class ArticleController : AbpController
     {
-        private readonly ITestService _testService;
+        private readonly IArticleService _testService;
 
-        public TestController(ITestService testService)
+        public ArticleController(IArticleService testService)
         {
             this._testService = testService;
         }
@@ -27,7 +27,7 @@ namespace Haowen.Controllers
         /// <param name="dto"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<ServiceResult<string>> InsertTestAsync([FromBody] TestDto dto)
+        public async Task<ServiceResult<string>> InsertTestAsync([FromBody] ArticleDto dto)
         {
             return await _testService.InsertTestAsync(dto);
         }
@@ -49,7 +49,7 @@ namespace Haowen.Controllers
         /// <param name="dto"></param>
         /// <returns></returns>
         [HttpPut]
-        public async Task<ServiceResult<string>> UpdateTestAsync([Required] Guid id, [FromBody] TestDto dto)
+        public async Task<ServiceResult<string>> UpdateTestAsync([Required] Guid id, [FromBody] ArticleDto dto)
         {
             return await _testService.UpdateTestAsync(id, dto);
         }
@@ -60,7 +60,7 @@ namespace Haowen.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<ServiceResult<TestDto>> GetTestAsync([Required] Guid id)
+        public async Task<ServiceResult<ArticleDto>> GetTestAsync([Required] Guid id)
         {
             return await _testService.GetTestAsync(id);
         }

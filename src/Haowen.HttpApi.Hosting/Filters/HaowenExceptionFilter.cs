@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Haowen.Filters
 {
-    public class TemplateExceptionFilter: IExceptionFilter
+    public class HaowenExceptionFilter: IExceptionFilter
     {
         private readonly ILog _log;
 
-        public TemplateExceptionFilter()
+        public HaowenExceptionFilter()
         {
-            _log = LogManager.GetLogger(typeof(TemplateExceptionFilter));
+            _log = LogManager.GetLogger(typeof(HaowenExceptionFilter));
         }
 
         /// <summary>

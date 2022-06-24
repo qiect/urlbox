@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace Haowen.EntityFrameworkCore.DbMigrations
 {
-    public class TemplateDbMigrationsDbContextFactory : IDesignTimeDbContextFactory<TemplateDbMigrationsDbContext>
+    public class HaowenDbMigrationsDbContextFactory : IDesignTimeDbContextFactory<HaowenDbMigrationsDbContext>
     {
-        public TemplateDbMigrationsDbContext CreateDbContext(string[] args)
+        public HaowenDbMigrationsDbContext CreateDbContext(string[] args)
         {
             var configuration = BuildConfiguration();
 
-            var builder = new DbContextOptionsBuilder<TemplateDbMigrationsDbContext>()
+            var builder = new DbContextOptionsBuilder<HaowenDbMigrationsDbContext>()
                 .UseMySql(configuration.GetConnectionString("MySql"), ServerVersion.Parse("8.0.27"));
 
-            return new TemplateDbMigrationsDbContext(builder.Options);
+            return new HaowenDbMigrationsDbContext(builder.Options);
         }
 
         private static IConfigurationRoot BuildConfiguration()

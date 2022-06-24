@@ -3,11 +3,11 @@ using Haowen.ToolKits.Base;
 
 namespace Haowen
 {
-    public class TestService : ServiceBase, ITestService
+    public class AiticleService : ServiceBase, IArticleService
     {
-        private readonly ITestRepository _testRepository;
+        private readonly IArticleRepository _testRepository;
 
-        public TestService(ITestRepository testRepository)
+        public AiticleService(IArticleRepository testRepository)
         {
             this._testRepository = testRepository;
         }
@@ -19,9 +19,9 @@ namespace Haowen
             return result;
         }
 
-        public async Task<ServiceResult<TestDto>> GetTestAsync(Guid id)
+        public async Task<ServiceResult<ArticleDto>> GetTestAsync(Guid id)
         {
-            var result = new ServiceResult<TestDto>();
+            var result = new ServiceResult<ArticleDto>();
             var entity = await _testRepository.GetAsync(id);
             if (entity == null)
             {
@@ -29,16 +29,16 @@ namespace Haowen
             }
             else
             {
-                var dto = ObjectMapper.Map<Test, TestDto>(entity);
+                var dto = ObjectMapper.Map<Article, ArticleDto>(entity);
                 result.IsSuccess(dto);
             }
             return result;
         }
 
-        public async Task<ServiceResult<string>> InsertTestAsync(TestDto dto)
+        public async Task<ServiceResult<string>> InsertTestAsync(ArticleDto dto)
         {
             var result = new ServiceResult<string>();
-            var entity = ObjectMapper.Map<TestDto,Test>(dto); 
+            var entity = ObjectMapper.Map<ArticleDto,Article>(dto); 
             var test = await _testRepository.InsertAsync(entity);
             if (test != null)
             {
@@ -51,7 +51,7 @@ namespace Haowen
             return result;
         }
 
-        public async Task<ServiceResult<string>> UpdateTestAsync(Guid id, TestDto dto)
+        public async Task<ServiceResult<string>> UpdateTestAsync(Guid id, ArticleDto dto)
         {
             var result = new ServiceResult<string>();
             var entity = await _testRepository.GetAsync(id);
@@ -61,8 +61,8 @@ namespace Haowen
             }
             else
             {
-                entity.Name = dto.Name;
-                entity.Remark = dto.Remark;
+                entity.Title = dto.Title;
+                entity.Url = dto.Url;
                 await _testRepository.UpdateAsync(entity);
                 result.IsSuccess("更新成功！");
             }

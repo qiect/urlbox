@@ -8,9 +8,9 @@ using Volo.Abp.EntityFrameworkCore;
 
 namespace Haowen.EntityFrameworkCore.DbMigrations
 {
-    public class TemplateDbMigrationsDbContext : AbpDbContext<TemplateDbMigrationsDbContext>
+    public class HaowenDbMigrationsDbContext : AbpDbContext<HaowenDbMigrationsDbContext>
     {
-        public TemplateDbMigrationsDbContext(DbContextOptions<TemplateDbMigrationsDbContext> options) : base(options)
+        public HaowenDbMigrationsDbContext(DbContextOptions<HaowenDbMigrationsDbContext> options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder builder)

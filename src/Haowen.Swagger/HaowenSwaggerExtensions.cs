@@ -8,7 +8,7 @@ using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace Haowen.Swagger
 {
-    public static class TemplateSwaggerExtensions
+    public static class HaowenSwaggerExtensions
     {
         /// <summary>
         /// 当前API版本，从appsettings.json获取

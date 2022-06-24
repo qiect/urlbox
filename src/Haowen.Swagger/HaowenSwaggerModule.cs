@@ -4,8 +4,8 @@ using Volo.Abp.Modularity;
 
 namespace Haowen.Swagger
 {
-    [DependsOn(typeof(TemplateDomainModule))]
-    public class TemplateSwaggerModule : AbpModule
+    [DependsOn(typeof(HaowenDomainModule))]
+    public class HaowenSwaggerModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {

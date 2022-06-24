@@ -3,7 +3,7 @@
 namespace Haowen;
 
 [DependsOn(
-    typeof(TemplateDomainSharedModule)
+    typeof(HaowenDomainSharedModule)
 )]
 public class TemplateApplicationContractsModule : AbpModule
 {

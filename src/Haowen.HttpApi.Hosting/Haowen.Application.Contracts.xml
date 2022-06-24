@@ -4,14 +4,29 @@
         <name>Haowen.Application.Contracts</name>
     </assembly>
     <members>
-        <member name="P:Haowen.TestDto.Name">
+        <member name="P:Haowen.ArticleDto.Title">
             <summary>
-            名称
+            标题
             </summary>
         </member>
-        <member name="P:Haowen.TestDto.Remark">
+        <member name="P:Haowen.ArticleDto.Url">
             <summary>
-            备注
+            Url
+            </summary>
+        </member>
+        <member name="P:Haowen.ArticleDto.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:Haowen.ArticleDto.Des">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Haowen.ArticleDto.Tags">
+            <summary>
+            标签
             </summary>
         </member>
     </members>

@@ -10,7 +10,7 @@ namespace Haowen;
 [DependsOn(
     typeof(AbpIdentityDomainSharedModule)
     )]
-public class TemplateDomainSharedModule : AbpModule
+public class HaowenDomainSharedModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Haowen.Application.Caching
 {
-    public static class TemplateAppCachingExtensions
+    public static class HaowenAppCachingExtensions
     {
         /// <summary>
         /// 获取或添加缓存

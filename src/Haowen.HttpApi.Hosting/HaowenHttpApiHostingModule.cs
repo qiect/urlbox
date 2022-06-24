@@ -25,11 +25,11 @@ namespace Haowen.Web;
        typeof(AbpAspNetCoreMvcModule),
        typeof(AbpAutofacModule),
        typeof(TemplateHttpApiModule),
-       typeof(TemplateSwaggerModule),
-       typeof(TemplateEntityFrameworkCoreModule),
+       typeof(HaowenSwaggerModule),
+       typeof(HaowenEntityFrameworkCoreModule),
        typeof(TemplateBackgroundJobsModule)
     )]
-public class TemplateHttpApiHostingModule : AbpModule
+public class HaowenHttpApiHostingModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
@@ -63,7 +63,7 @@ public class TemplateHttpApiHostingModule : AbpModule
 
             // 移除 AbpExceptionFilter
             options.Filters.Remove(filterMetadata);
-            options.Filters.Add(typeof(TemplateExceptionFilter));
+            options.Filters.Add(typeof(HaowenExceptionFilter));
         });
 
         //路由规则配置

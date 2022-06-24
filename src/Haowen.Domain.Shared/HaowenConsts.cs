@@ -9,7 +9,7 @@ namespace Haowen
     /// <summary>
     /// 全局常量
     /// </summary>
-    public class TemplateConsts
+    public class HaowenConsts
     {
         /// <summary>
         /// 数据库表前缀

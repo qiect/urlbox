@@ -19,7 +19,7 @@ namespace Haowen.BackgroundJobs
                     new MySqlStorage(AppSettings.ConnectionStrings,
                     new MySqlStorageOptions
                     {
-                        TablesPrefix = TemplateConsts.DbTablePrefix + "hangfire"
+                        TablesPrefix = HaowenConsts.DbTablePrefix + "hangfire"
                     }));
             });
         }

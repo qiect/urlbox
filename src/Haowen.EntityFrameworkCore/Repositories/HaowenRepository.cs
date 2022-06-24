@@ -9,17 +9,17 @@ using Volo.Abp.EntityFrameworkCore;
 
 namespace Haowen.Repositories
 {
-    public class TestRepository : EfCoreRepository<TemplateDbContext, Test, Guid>, ITestRepository
+    public class HaowenRepository : EfCoreRepository<HaowenDbContext, Article, Guid>, IArticleRepository
     {
-        public TestRepository(IDbContextProvider<TemplateDbContext> dbContextProvider) : base(dbContextProvider)
+        public HaowenRepository(IDbContextProvider<HaowenDbContext> dbContextProvider) : base(dbContextProvider)
         {
 
         }
 
-        public async Task BatchInsertAsync(IEnumerable<Test> tests)
+        public async Task BatchInsertAsync(IEnumerable<Article> tests)
         {
             var dbCtx = await GetDbContextAsync();
-            await dbCtx.Tests.AddRangeAsync(tests);
+            await dbCtx.Articles.AddRangeAsync(tests);
             await dbCtx.SaveChangesAsync();
         }
     }

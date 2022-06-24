@@ -4,10 +4,10 @@ using Volo.Abp.Modularity;
 namespace Haowen;
 
 [DependsOn(
-    typeof(TemplateDomainSharedModule),
+    typeof(HaowenDomainSharedModule),
     typeof(AbpIdentityDomainModule)
 )]
-public class TemplateDomainModule : AbpModule
+public class HaowenDomainModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

@@ -10,10 +10,10 @@ using Volo.Abp.EntityFrameworkCore;
 namespace Haowen.EntityFrameworkCore
 {
     [ConnectionStringName("MySql")]
-    public class TemplateDbContext : AbpDbContext<TemplateDbContext>
+    public class HaowenDbContext : AbpDbContext<HaowenDbContext>
     {
-        public DbSet<Test> Tests { get; set; }
-        public TemplateDbContext(DbContextOptions<TemplateDbContext> options) : base(options)
+        public DbSet<Article> Articles { get; set; }
+        public HaowenDbContext(DbContextOptions<HaowenDbContext> options) : base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

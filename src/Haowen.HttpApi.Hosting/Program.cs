@@ -14,7 +14,7 @@ public class Program
 
         var builder = WebApplication.CreateBuilder(args);
         builder.Host.UseLog4Net().UseAutofac();
-        await builder.AddApplicationAsync<TemplateHttpApiHostingModule>();
+        await builder.AddApplicationAsync<HaowenHttpApiHostingModule>();
         var app = builder.Build();
         await app.InitializeApplicationAsync();
         await app.RunAsync();

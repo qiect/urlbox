@@ -5,7 +5,7 @@ namespace Haowen;
 
 [DependsOn(
     typeof(AbpIdentityHttpApiModule),
-    typeof(TemplateApplicationModule)
+    typeof(HaowenApplicationModule)
     )]
 public class TemplateHttpApiModule : AbpModule
 {

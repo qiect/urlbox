@@ -1,10 +1,10 @@
 ﻿using Haowen.ToolKits.Base;
 namespace Haowen
 {
-    public interface ITestService
+    public interface IArticleService
     {
         //Task<bool> InsertTestAsync(TestDto dto);
-        Task<ServiceResult<string>> InsertTestAsync(TestDto dto);
+        Task<ServiceResult<string>> InsertTestAsync(ArticleDto dto);
 
 
         //Task<bool> DeleteTestAsync(Guid id);
@@ -12,11 +12,11 @@ namespace Haowen
 
 
         //Task<bool> UpdateTestAsync(Guid id, TestDto dto);
-        Task<ServiceResult<string>> UpdateTestAsync(Guid id, TestDto dto);
+        Task<ServiceResult<string>> UpdateTestAsync(Guid id, ArticleDto dto);
 
 
         //Task<TestDto> GetTestAsync(Guid id);
-        Task<ServiceResult<TestDto>> GetTestAsync(Guid id);
+        Task<ServiceResult<ArticleDto>> GetTestAsync(Guid id);
 
     }
 }

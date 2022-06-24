@@ -4,13 +4,13 @@ using Volo.Abp.Modularity;
 namespace Haowen.EntityFrameworkCore.DbMigrations
 {
     [DependsOn(
-    typeof(TemplateEntityFrameworkCoreModule)
+    typeof(HaowenEntityFrameworkCoreModule)
     )]
-    public class TemplateEntityFrameworkCoreDbMigrationsModule : AbpModule
+    public class HaowenEntityFrameworkCoreDbMigrationsModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            context.Services.AddAbpDbContext<TemplateDbContext>();
+            context.Services.AddAbpDbContext<HaowenDbContext>();
         }
     }
 }
