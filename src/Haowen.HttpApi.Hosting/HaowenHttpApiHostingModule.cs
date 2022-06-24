@@ -24,7 +24,7 @@ namespace Haowen.Web;
 [DependsOn(
        typeof(AbpAspNetCoreMvcModule),
        typeof(AbpAutofacModule),
-       typeof(TemplateHttpApiModule),
+       typeof(HaowenHttpApiModule),
        typeof(HaowenSwaggerModule),
        typeof(HaowenEntityFrameworkCoreModule),
        typeof(TemplateBackgroundJobsModule)

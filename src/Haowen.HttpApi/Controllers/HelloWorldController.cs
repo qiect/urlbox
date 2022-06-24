@@ -6,21 +6,21 @@ namespace Haowen.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [ApiExplorerSettings(GroupName = Grouping.GroupName_Other)]
+    [ApiExplorerSettings(GroupName = Grouping.GroupName_Admin)]
     public class HelloWorldController : AbpController
     {
-        private readonly IHelloWorldService _helloWorldService;
+        //private readonly IHelloWorldService _helloWorldService;
 
-        public HelloWorldController(IHelloWorldService helloWorldService)
-        {
-            _helloWorldService = helloWorldService;
-        }
+        //public HelloWorldController(IHelloWorldService helloWorldService)
+        //{
+        //    _helloWorldService = helloWorldService;
+        //}
 
-        [HttpGet]
-        public string HelloWorld()
-        {
-            return _helloWorldService.HelloWorld();
-        }
+        //[HttpGet]
+        //public string HelloWorld()
+        //{
+        //    return _helloWorldService.HelloWorld();
+        //}
 
         /// <summary>
         /// 这是一个异常
@@ -31,7 +31,8 @@ namespace Haowen.Controllers
         [Route("Exception")]
         public string Exception()
         {
-            throw new NotImplementedException("这是一个未实现的异常接口");
+            //throw new NotImplementedException("这是一个未实现的异常接口");
+            return "成功";
         }
     }
 }

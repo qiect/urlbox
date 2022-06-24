@@ -7,7 +7,7 @@ namespace Haowen;
     typeof(AbpIdentityHttpApiModule),
     typeof(HaowenApplicationModule)
     )]
-public class TemplateHttpApiModule : AbpModule
+public class HaowenHttpApiModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

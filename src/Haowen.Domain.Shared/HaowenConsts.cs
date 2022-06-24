@@ -22,25 +22,16 @@ namespace Haowen
     /// </summary>
     public static class Grouping
     {
-        /// <summary>
-        /// Test前台接口组
-        /// </summary>
-        public const string GroupName_Front = "v1";
 
         /// <summary>
-        /// Test后台接口组
+        /// 后台接口组
         /// </summary>
-        public const string GroupName_Admin = "v2";
-
-        /// <summary>
-        /// 其他通用接口组
-        /// </summary>
-        public const string GroupName_Other = "v3";
+        public const string GroupName_Admin = "v1";
 
         /// <summary>
         /// JWT授权接口组
         /// </summary>
-        public const string GroupName_JWT = "v4";
+        public const string GroupName_JWT = "v2";
     }
 
     /// <summary>

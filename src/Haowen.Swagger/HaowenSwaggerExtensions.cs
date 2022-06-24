@@ -28,34 +28,12 @@ namespace Haowen.Swagger
         {
             new SwaggerApiInfo
             {
-                UrlPrefix = Grouping.GroupName_Front,
-                Name = "Test前台接口",
-                OpenApiInfo = new OpenApiInfo
-                {
-                    Version = version,
-                    Title = "Haowen - Test前台接口",
-                    Description = description
-                }
-            },
-            new SwaggerApiInfo
-            {
                 UrlPrefix = Grouping.GroupName_Admin,
-                Name = "Test后台接口",
+                Name = "后台接口",
                 OpenApiInfo = new OpenApiInfo
                 {
                     Version = version,
-                    Title = "Haowen - Test后台接口",
-                    Description = description
-                }
-            },
-            new SwaggerApiInfo
-            {
-                UrlPrefix = Grouping.GroupName_Other,
-                Name = "通用公共接口",
-                OpenApiInfo = new OpenApiInfo
-                {
-                    Version = version,
-                    Title = "Haowen - 通用公共接口",
+                    Title = "Haowen - 后台接口",
                     Description = description
                 }
             },
@@ -98,12 +76,12 @@ namespace Haowen.Swagger
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.ApiKey
                 };
-                
+
                 options.AddSecurityDefinition("oauth2", security);
                 options.AddSecurityRequirement(new OpenApiSecurityRequirement { { security, new List<string>() } });
                 options.OperationFilter<AddResponseHeadersFilter>();
                 options.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();
-                options.OperationFilter<SecurityRequirementsOperationFilter>(); 
+                options.OperationFilter<SecurityRequirementsOperationFilter>();
                 #endregion
 
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Haowen.HttpApi.xml"));

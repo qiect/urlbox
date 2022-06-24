@@ -1,5 +1,4 @@
 ﻿using Haowen.ToolKits.Base;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -11,7 +10,7 @@ namespace Haowen.Controllers
     [ApiController]
     [Route("[controller]")]
     [ApiExplorerSettings(GroupName = Grouping.GroupName_Admin)]
-    [Authorize]
+    //[Authorize]
     public class ArticleController : AbpController
     {
         private readonly IArticleService _ArticleService;
