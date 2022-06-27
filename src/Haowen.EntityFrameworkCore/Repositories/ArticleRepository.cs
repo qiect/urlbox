@@ -9,9 +9,9 @@ using Volo.Abp.EntityFrameworkCore;
 
 namespace Haowen.Repositories
 {
-    public class HaowenRepository : EfCoreRepository<HaowenDbContext, Article, Guid>, IArticleRepository
+    public class ArticleRepository : EfCoreRepository<HaowenDbContext, Article, Guid>, IArticleRepository
     {
-        public HaowenRepository(IDbContextProvider<HaowenDbContext> dbContextProvider) : base(dbContextProvider)
+        public ArticleRepository(IDbContextProvider<HaowenDbContext> dbContextProvider) : base(dbContextProvider)
         {
 
         }

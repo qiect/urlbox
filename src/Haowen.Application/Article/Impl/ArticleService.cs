@@ -4,11 +4,11 @@ using Newtonsoft.Json;
 
 namespace Haowen
 {
-    public class AiticleService : ServiceBase, IArticleService
+    public class ArticleService : ServiceBase, IArticleService
     {
         private readonly IArticleRepository _articleRepository;
 
-        public AiticleService(IArticleRepository articleRepository)
+        public ArticleService(IArticleRepository articleRepository)
         {
             this._articleRepository = articleRepository;
         }

@@ -16,11 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Haowen.Application\Haowen.Application.csproj" />
+    <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="5.2.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="5.2.0" />
+    <ProjectReference Include="..\Haowen.Application\Haowen.Application.csproj" />
   </ItemGroup>
 
 </Project>
