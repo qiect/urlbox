@@ -69,7 +69,10 @@ namespace Haowen
                 });
             }
             var result = new ServiceResult<string>();
-            result.IsSuccess(JsonConvert.SerializeObject(articleDtos));
+            result.IsSuccess(JsonConvert.SerializeObject(articleDtos,  new JsonSerializerSettings
+            {
+                ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver()
+            }));
             return result;
         }
 
