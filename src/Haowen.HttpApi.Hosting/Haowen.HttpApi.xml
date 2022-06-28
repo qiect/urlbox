@@ -53,12 +53,5 @@
             <param name="access_token"></param>
             <returns></returns>
         </member>
-        <member name="M:Haowen.Controllers.HelloWorldController.Exception">
-            <summary>
-            这是一个异常
-            </summary>
-            <returns></returns>
-            <exception cref="T:System.NotImplementedException"></exception>
-        </member>
     </members>
 </doc>
