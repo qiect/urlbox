@@ -26,8 +26,8 @@ namespace Haowen.Web;
        typeof(AbpAutofacModule),
        typeof(HaowenHttpApiModule),
        typeof(HaowenSwaggerModule),
-       typeof(HaowenEntityFrameworkCoreModule),
-       typeof(TemplateBackgroundJobsModule)
+       typeof(HaowenEntityFrameworkCoreModule)
+       //typeof(TemplateBackgroundJobsModule)
     )]
 public class HaowenHttpApiHostingModule : AbpModule
 {

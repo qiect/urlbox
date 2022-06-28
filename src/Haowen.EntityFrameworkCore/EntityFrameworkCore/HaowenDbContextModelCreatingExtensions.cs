@@ -22,7 +22,7 @@ namespace Haowen.EntityFrameworkCore
                 p.Property(p => p.Url).HasMaxLength(200).IsRequired();
                 p.Property(p => p.Icon).HasMaxLength(200);
                 p.Property(p => p.Des).HasMaxLength(500);
-                p.HasMany(p => p.Tags).WithMany(p => p.Articles);
+                p.Property(p => p.Tags).HasMaxLength(100);
             });
             builder.Entity<Tag>(p =>
             {

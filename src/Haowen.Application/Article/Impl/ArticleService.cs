@@ -7,10 +7,12 @@ namespace Haowen
     public class ArticleService : ServiceBase, IArticleService
     {
         private readonly IArticleRepository _articleRepository;
+        private readonly ITagRepository _tagRepository;
 
-        public ArticleService(IArticleRepository articleRepository)
+        public ArticleService(IArticleRepository articleRepository, ITagRepository tagRepository)
         {
             this._articleRepository = articleRepository;
+            this._tagRepository = tagRepository;
         }
 
         public async Task<ServiceResult> DeleteArticleAsync(Guid id)
@@ -54,6 +56,21 @@ namespace Haowen
         {
             var result = new ServiceResult<string>();
             var entity = ObjectMapper.Map<ArticleDto, Article>(dto);
+            var iTags = new int[dto.Tags.Length];
+            //新增标签
+            foreach (var tag in dto.Tags)
+            {
+                var tagEntity = await _tagRepository.FindAsync(p => p.Name.Equals(tag));
+                if (tagEntity == null)
+                {
+                    tagEntity = await _tagRepository.InsertAsync(new Tag
+                    {
+                        Name = tag
+                    }, true);
+                }
+                iTags.AddLast(tagEntity.Id);
+            }
+            entity.Tags = JsonConvert.SerializeObject(iTags);
             var Article = await _articleRepository.InsertAsync(entity);
             if (Article != null)
             {

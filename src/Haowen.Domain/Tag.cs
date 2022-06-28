@@ -9,6 +9,5 @@ namespace Haowen
     public class Tag : Entity<int>
     {
         public string Name { get; set; }
-        public ICollection<Article> Articles { get; set; }
     }
 }

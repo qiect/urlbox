@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Volo.Abp.Domain.Repositories;
 
-namespace Haowen
+namespace Haowen.Repositories
 {
-    public class TagDto
+    public interface ITagRepository : IRepository<Tag, int>
     {
-        public string Name { get; set; }
     }
 }
