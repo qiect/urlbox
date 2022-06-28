@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Haowen
 {
@@ -27,6 +23,6 @@ namespace Haowen
         /// <summary>
         /// 标签
         /// </summary>
-        public string Tags { get; set; }
+        public ICollection<TagDto> Tags { get; set; }
     }
 }

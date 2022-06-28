@@ -36,21 +36,14 @@ namespace Haowen
             return result;
         }
 
+        /// <summary>
+        /// 获取所有文章
+        /// </summary>
+        /// <returns></returns>
         public async Task<ServiceResult<string>> GetArticlesAsync()
         {
-            var entityList = await _articleRepository.GetListAsync();
-            var articleDtos = new List<ArticleDto>();
-            foreach (var entity in entityList)
-            {
-                new ArticleDto
-                {
-                    Title = entity.Title,
-                    Url = entity.Url,
-                    Icon = entity.Icon,
-                    Des = entity.Des,
-                    Tags = $"[{string.Join(',', entity.Tags.Select(p => "\"" + p.Name + "\""))}]",
-                };
-            }
+            var entityList = await _articleRepository.WithDetailsAsync(p => p.Tags);
+            var articleDtos = ObjectMapper.Map<List<Article>, List<ArticleDto>>(entityList.ToList());
             var result = new ServiceResult<string>();
             result.IsSuccess(JsonConvert.SerializeObject(articleDtos));
             return result;

@@ -18,5 +18,11 @@ namespace Haowen
         //Task<ArticleDto> GetArticleAsync(Guid id);
         Task<ServiceResult<ArticleDto>> GetArticleAsync(Guid id);
 
+        /// <summary>
+        /// 获取所有文章
+        /// </summary>
+        /// <returns></returns>
+        Task<ServiceResult<string>> GetArticlesAsync();
+
     }
 }

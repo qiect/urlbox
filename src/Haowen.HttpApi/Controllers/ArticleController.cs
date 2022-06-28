@@ -59,9 +59,9 @@ namespace Haowen.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<ServiceResult<ArticleDto>> GetArticleAsync([Required] Guid id)
+        public async Task<ServiceResult<string>> GetArticleAsync()
         {
-            return await _ArticleService.GetArticleAsync(id);
+            return await _ArticleService.GetArticlesAsync();
         }
     }
 }

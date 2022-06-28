@@ -26,7 +26,7 @@
             <param name="dto"></param>
             <returns></returns>
         </member>
-        <member name="M:Haowen.Controllers.ArticleController.GetArticleAsync(System.Guid)">
+        <member name="M:Haowen.Controllers.ArticleController.GetArticleAsync">
             <summary>
             查询Article
             </summary>

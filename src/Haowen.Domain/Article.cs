@@ -28,6 +28,6 @@ namespace Haowen
         /// <summary>
         /// 标签
         /// </summary>
-        public ICollection<Tag> Tags { get; set; }
+        public string Tags { get; set; }
     }
 }
