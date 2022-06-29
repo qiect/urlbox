@@ -10,9 +10,9 @@ namespace Haowen
     public class Article : Entity<Guid>
     {
         /// <summary>
-        /// 标题
+        /// 名称
         /// </summary>
-        public string Title { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// Url
         /// </summary>

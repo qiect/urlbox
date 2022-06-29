@@ -61,7 +61,7 @@ namespace Haowen
             {
                 articleDtos.Add(new ArticleDto
                 {
-                    Title = item.Title,
+                    Name = item.Name,
                     Icon = item.Icon,
                     Url = item.Url,
                     Des = item.Des,
@@ -144,7 +144,7 @@ namespace Haowen
             }
             else
             {
-                entity.Title = dto.Title;
+                entity.Name = dto.Name;
                 entity.Url = dto.Url;
                 await _articleRepository.UpdateAsync(entity);
                 result.IsSuccess("更新成功！");

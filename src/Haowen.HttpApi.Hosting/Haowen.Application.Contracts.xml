@@ -4,9 +4,9 @@
         <name>Haowen.Application.Contracts</name>
     </assembly>
     <members>
-        <member name="P:Haowen.ArticleDto.Title">
+        <member name="P:Haowen.ArticleDto.Name">
             <summary>
-            标题
+            名称
             </summary>
         </member>
         <member name="P:Haowen.ArticleDto.Url">

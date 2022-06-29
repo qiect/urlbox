@@ -5,9 +5,9 @@ namespace Haowen
     public class ArticleDto
     {
         /// <summary>
-        /// 标题
+        /// 名称
         /// </summary>
-        public string Title { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// Url
         /// </summary>
