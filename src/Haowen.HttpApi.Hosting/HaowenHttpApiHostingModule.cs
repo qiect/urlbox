@@ -102,7 +102,7 @@ public class HaowenHttpApiHostingModule : AbpModule
         app.UseAuthorization();
 
         //app.UseHsts();//使用HSTS的中间件，该中间件添加了严格传输安全头
-        //app.UseCors();//使用默认的跨域配置
+        app.UseCors();//使用默认的跨域配置
         //app.UseHttpsRedirection();//HTTP请求转HTTPS
 
         // 路由映射
