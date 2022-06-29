@@ -6,6 +6,7 @@ using Haowen.Middleware;
 using Haowen.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,6 +32,8 @@ namespace Haowen.Web;
     )]
 public class HaowenHttpApiHostingModule : AbpModule
 {
+    private const string DefaultCorsPolicyName = "Default";
+
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
         // 身份验证
@@ -78,11 +81,20 @@ public class HaowenHttpApiHostingModule : AbpModule
 
         context.Services.AddCors(options =>
         {
-            options.AddPolicy("any", builder =>
+            options.AddPolicy(DefaultCorsPolicyName, builder =>
             {
-                builder.WithMethods("GET", "POST", "HEAD", "PUT", "DELETE", "OPTIONS")
-            //.AllowCredentials()//指定处理cookie
-            .AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(); //允许任何来源的主机访问
+                builder
+                    .WithOrigins(
+                        AppSettings.App.CorsOrigins
+                            .Split(",", StringSplitOptions.RemoveEmptyEntries)
+                            .Select(o => o.RemovePostFix("/"))
+                            .ToArray()
+                    )
+                    .WithAbpExposedHeaders()
+                    .SetIsOriginAllowedToAllowWildcardSubdomains()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials();
             });
         });
     }
@@ -113,7 +125,7 @@ public class HaowenHttpApiHostingModule : AbpModule
         app.UseAuthorization();
 
         //app.UseHsts();//使用HSTS的中间件，该中间件添加了严格传输安全头
-        app.UseCors("any");//使用默认的跨域配置
+        app.UseCors(DefaultCorsPolicyName);//使用默认的跨域配置
         //app.UseHttpsRedirection();//HTTP请求转HTTPS
 
         // 路由映射

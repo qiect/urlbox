@@ -43,6 +43,13 @@ namespace Haowen.Configurations
         /// </summary>
         public static string ConnectionStrings => _config.GetConnectionString(EnableDb);
 
+        #region App
+        public static class App
+        {
+            public static string CorsOrigins => _config["App:CorsOrigins"];
+        } 
+        #endregion
+
         #region GitHub
         /// <summary>
         /// GitHub
@@ -98,7 +105,7 @@ namespace Haowen.Configurations
             public static string Login => _config["Hangfire:Login"];
 
             public static string Password => _config["Hangfire:Password"];
-        } 
+        }
         #endregion
     }
 
