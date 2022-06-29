@@ -301,9 +301,9 @@
       var self = this;
       this.loadingEml.style.display = "block";
       this.loading();
-      this.ajax("js/data.min.json", function (dt) {
+      this.ajax("http://82.157.96.191/article", function (dt) {
         self.loadingEml.style.display = "none";
-        self.data = dt;
+        self.data = dt.result;
         self.info.innerHTML = "搜集到<i> " + dt.length + " </i>个站点 ｜ ";
         var kw = self.getQueryString("kw");
 
