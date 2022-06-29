@@ -27,7 +27,7 @@ namespace Haowen.Web;
        typeof(HaowenHttpApiModule),
        typeof(HaowenSwaggerModule),
        typeof(HaowenEntityFrameworkCoreModule)
-       //typeof(TemplateBackgroundJobsModule)
+    //typeof(TemplateBackgroundJobsModule)
     )]
 public class HaowenHttpApiHostingModule : AbpModule
 {
@@ -66,6 +66,7 @@ public class HaowenHttpApiHostingModule : AbpModule
             options.Filters.Add(typeof(HaowenExceptionFilter));
         });
 
+
         //路由规则配置
         context.Services.AddRouting(options =>
         {
@@ -73,6 +74,16 @@ public class HaowenHttpApiHostingModule : AbpModule
             options.LowercaseUrls = true;
             // 在生成的URL后面添加斜杠
             options.AppendTrailingSlash = true;
+        });
+
+        context.Services.AddCors(options =>
+        {
+            options.AddPolicy("any", builder =>
+            {
+                builder.WithMethods("GET", "POST", "HEAD", "PUT", "DELETE", "OPTIONS")
+            //.AllowCredentials()//指定处理cookie
+            .AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(); //允许任何来源的主机访问
+            });
         });
     }
 
@@ -102,7 +113,7 @@ public class HaowenHttpApiHostingModule : AbpModule
         app.UseAuthorization();
 
         //app.UseHsts();//使用HSTS的中间件，该中间件添加了严格传输安全头
-        app.UseCors();//使用默认的跨域配置
+        app.UseCors("any");//使用默认的跨域配置
         //app.UseHttpsRedirection();//HTTP请求转HTTPS
 
         // 路由映射
