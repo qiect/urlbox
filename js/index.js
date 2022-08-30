@@ -301,7 +301,7 @@
       var self = this;
       this.loadingEml.style.display = "block";
       this.loading();
-      this.ajax("http://82.157.96.191/article", function (dt) {
+      this.ajax("https://haowen.link/article", function (dt) {
         self.loadingEml.style.display = "none";
         self.data = JSON.parse(dt.result);
         self.info.innerHTML = "搜集到<i> " + dt.length + " </i>个站点 ｜ ";
