@@ -98,7 +98,7 @@ namespace Haowen.Swagger
                 // 遍历分组信息，生成Json
                 ApiInfos.ForEach(x =>
                 {
-                    options.SwaggerEndpoint($"/swagger/{x.UrlPrefix}/swagger.json", x.Name);
+                    options.SwaggerEndpoint($"swagger/{x.UrlPrefix}/swagger.json", x.Name);
                     // 模型的默认扩展深度，设置为 -1 完全隐藏模型
                     options.DefaultModelsExpandDepth(-1);
                     // API文档仅展开标记
