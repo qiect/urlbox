@@ -304,7 +304,7 @@
       this.ajax("https://haowen.link/article", function (dt) {
         self.loadingEml.style.display = "none";
         self.data = JSON.parse(dt.result);
-        self.info.innerHTML = "搜集到<i> " + dt.length + " </i>个站点 ｜ ";
+        self.info.innerHTML = "收录了<i> " + self.data.length + " </i>个站点 ｜ ";
         var kw = self.getQueryString("kw");
 
         self.getTagsAll();
