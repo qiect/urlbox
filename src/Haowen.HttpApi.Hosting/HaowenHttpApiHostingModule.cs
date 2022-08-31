@@ -99,12 +99,12 @@ public class HaowenHttpApiHostingModule : AbpModule
             });
         });
 
-        context.Services.Configure<ForwardedHeadersOptions>(options =>
-        {
-            options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
-            options.KnownNetworks.Clear();
-            options.KnownProxies.Clear();
-        });
+        //context.Services.Configure<ForwardedHeadersOptions>(options =>
+        //{
+        //    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+        //    options.KnownNetworks.Clear();
+        //    options.KnownProxies.Clear();
+        //});
     }
 
     public override void OnApplicationInitialization(ApplicationInitializationContext context)

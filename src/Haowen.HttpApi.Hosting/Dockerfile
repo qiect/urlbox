@@ -4,4 +4,4 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
 EXPOSE 80
 COPY . .
-ENTRYPOINT ["dotnet", "Haowen.HttpApi.Hosting.dll"]
+ENTRYPOINT ["dotnet", "Haowen.HttpApi.Hosting.dll","--service.urls","--server.urls","http://*:5000;https://*:50001"]

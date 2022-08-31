@@ -15,7 +15,7 @@ public class Program
 
         var builder = WebApplication.CreateBuilder(args);
         builder.Host.UseLog4Net().UseAutofac();
-        builder.WebHost.UseUrls("http://*:5000");
+        builder.WebHost.UseUrls("http://*:5000","https://*:5001");
         await builder.AddApplicationAsync<HaowenHttpApiHostingModule>();
         var app = builder.Build();
         await app.InitializeApplicationAsync();
