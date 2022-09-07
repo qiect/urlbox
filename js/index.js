@@ -41,7 +41,6 @@
         return typeof returns === "undefined" ? "" : returns;
       });
     },
-    // loading1();
     loading: function () {
       var canvas = this.loadingEml,
         ctx = canvas.getContext("2d"),
@@ -116,18 +115,18 @@
         self = this,
         reg = new RegExp("(" + keywolds + ")", "ig");
       if (type === "search") {
-        name = arr.name.replace(reg, '<i class="kw">' + "$1" + "</i>");
-        des = arr.des.replace(reg, '<i class="kw">' + "$1" + "</i>") || "";
+        name = arr.name?.replace(reg, '<i class="kw">' + "$1" + "</i>");
+        des = arr.des?.replace(reg, '<i class="kw">' + "$1" + "</i>") || "";
       }
       return this.simple(this.ulhtml, {
         name: name,
         url: arr.url,
         des: des || "",
         icon: (function () {
-          var dm = self.domainReg.exec(arr.url);
           if (arr.icon) {
             return '<img src="' + arr.icon + '" />';
           } else {
+            var dm = self.domainReg.exec(arr.url);
             if (dm && dm[0]) {
               return (
                 '<img src="' +
@@ -304,7 +303,8 @@
       this.ajax("https://haowen.link/article", function (dt) {
         self.loadingEml.style.display = "none";
         self.data = JSON.parse(dt.result);
-        self.info.innerHTML = "收录了<i> " + self.data.length + " </i>个站点 ｜ ";
+        self.info.innerHTML =
+          "收录了<i> " + self.data.length + " </i>个站点 ｜ ";
         var kw = self.getQueryString("kw");
 
         self.getTagsAll();
