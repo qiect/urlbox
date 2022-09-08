@@ -34,6 +34,11 @@
             标签
             </summary>
         </member>
+        <member name="P:Haowen.Article.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
         <member name="T:Haowen.Configurations.AppSettings">
             <summary>
             appsettings.json配置文件数据读取类

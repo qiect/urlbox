@@ -54,10 +54,10 @@ namespace Haowen
         /// <returns></returns>
         public async Task<ServiceResult<string>> GetArticlesAsync()
         {
-            var articleList = await _articleRepository.GetListAsync();
+            var articleList = await _articleRepository.GetQueryableAsync();
             var tagList = await _tagRepository.GetListAsync();
             var articleDtos = new List<ArticleDto>();
-            foreach (var item in articleList)
+            foreach (var item in articleList.OrderByDescending(p => p.CreationTime))
             {
                 articleDtos.Add(new ArticleDto
                 {
@@ -69,7 +69,7 @@ namespace Haowen
                 });
             }
             var result = new ServiceResult<string>();
-            result.IsSuccess(JsonConvert.SerializeObject(articleDtos,  new JsonSerializerSettings
+            result.IsSuccess(JsonConvert.SerializeObject(articleDtos, new JsonSerializerSettings
             {
                 ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver()
             }));

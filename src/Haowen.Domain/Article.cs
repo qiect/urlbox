@@ -29,5 +29,9 @@ namespace Haowen
         /// 标签
         /// </summary>
         public string Tags { get; set; }
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime CreationTime { get; set; } = DateTime.Now;
     }
 }
