@@ -53,5 +53,12 @@
             <param name="access_token"></param>
             <returns></returns>
         </member>
+        <member name="M:Haowen.Controllers.TagController.GetArticleAsync">
+            <summary>
+            获取所有标签
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
