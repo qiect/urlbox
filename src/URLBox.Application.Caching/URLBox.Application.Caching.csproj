@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+  
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="6.0.4" />
+    <PackageReference Include="Volo.Abp.Caching" Version="5.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\URLBox.Application.Contracts\URLBox.Application.Contracts.csproj" />
+    <ProjectReference Include="..\URLBox.Domain.Shared\URLBox.Domain.Shared.csproj" />
+    <ProjectReference Include="..\URLBox.Domain\URLBox.Domain.csproj" />
+    <ProjectReference Include="..\URLBox.ToolKits\URLBox.ToolKits.csproj" />
+  </ItemGroup>
+</Project>

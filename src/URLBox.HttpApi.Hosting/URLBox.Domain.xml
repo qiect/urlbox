@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>URLBox.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:URLBox.Article">
+            <summary>
+            文章
+            </summary>
+        </member>
+        <member name="P:URLBox.Article.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:URLBox.Article.Url">
+            <summary>
+            Url
+            </summary>
+        </member>
+        <member name="P:URLBox.Article.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:URLBox.Article.Des">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:URLBox.Article.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:URLBox.Article.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:URLBox.Configurations.AppSettings">
+            <summary>
+            appsettings.json配置文件数据读取类
+            </summary>
+        </member>
+        <member name="F:URLBox.Configurations.AppSettings._config">
+            <summary>
+            配置文件的根节点
+            </summary>
+        </member>
+        <member name="P:URLBox.Configurations.AppSettings.ApiVersion">
+            <summary>
+            ApiVersion
+            </summary>
+        </member>
+        <member name="M:URLBox.Configurations.AppSettings.#cctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:URLBox.Configurations.AppSettings.EnableDb">
+            <summary>
+            EnableDb
+            </summary>
+        </member>
+        <member name="P:URLBox.Configurations.AppSettings.ConnectionStrings">
+            <summary>
+            ConnectionStrings
+            </summary>
+        </member>
+        <member name="T:URLBox.Configurations.AppSettings.GitHub">
+            <summary>
+            GitHub
+            </summary>
+        </member>
+        <member name="P:URLBox.Configurations.AppSettings.JWT.SecurityKey">
+            <summary>
+            随便用编码工具进行生成
+            </summary>
+        </member>
+        <member name="P:URLBox.Configurations.AppSettings.JWT.Expires">
+            <summary>
+            token过期时间
+            </summary>
+        </member>
+        <member name="T:URLBox.Configurations.AppSettings.Caching">
+            <summary>
+            Caching
+            </summary>
+        </member>
+        <member name="P:URLBox.Configurations.AppSettings.Caching.RedisConnectionString">
+            <summary>
+            RedisConnectionString
+            </summary>
+        </member>
+        <member name="T:URLBox.Configurations.AppSettings.Hangfire">
+            <summary>
+            Hangfire
+            </summary>
+        </member>
+        <member name="F:URLBox.Configurations.GitHubConfig.API_Authorize">
+            <summary>
+            GET请求，跳转GitHub登录界面，获取用户授权，得到code
+            </summary>
+        </member>
+        <member name="F:URLBox.Configurations.GitHubConfig.API_AccessToken">
+            <summary>
+            POST请求，根据code得到access_token
+            </summary>
+        </member>
+        <member name="F:URLBox.Configurations.GitHubConfig.API_User">
+            <summary>
+            GET请求，根据access_token得到用户信息
+            </summary>
+        </member>
+        <member name="F:URLBox.Configurations.GitHubConfig.UserId">
+            <summary>
+            Github UserId
+            </summary>
+        </member>
+        <member name="F:URLBox.Configurations.GitHubConfig.Client_ID">
+            <summary>
+            Client ID
+            </summary>
+        </member>
+        <member name="F:URLBox.Configurations.GitHubConfig.Client_Secret">
+            <summary>
+            Client Secret
+            </summary>
+        </member>
+        <member name="F:URLBox.Configurations.GitHubConfig.Redirect_Uri">
+            <summary>
+            Authorization callback URL
+            </summary>
+        </member>
+        <member name="F:URLBox.Configurations.GitHubConfig.ApplicationName">
+            <summary>
+            Application name
+            </summary>
+        </member>
+        <member name="M:URLBox.Repositories.IArticleRepository.BatchInsertAsync(System.Collections.Generic.IEnumerable{URLBox.Article})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="tests"></param>
+            <returns></returns>
+        </member>
+        <member name="T:URLBox.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+    </members>
+</doc>

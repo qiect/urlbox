@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>URLBox.HttpApi</name>
+    </assembly>
+    <members>
+        <member name="M:URLBox.Controllers.ArticleController.InsertArticleAsync(URLBox.ArticleDto)">
+            <summary>
+            添加Article
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:URLBox.Controllers.ArticleController.DeleteArticleAsync(System.Guid)">
+            <summary>
+            删除Article
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:URLBox.Controllers.ArticleController.UpdateArticleAsync(System.Guid,URLBox.ArticleDto)">
+            <summary>
+            更新Article
+            </summary>
+            <param name="id"></param>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:URLBox.Controllers.ArticleController.GetArticleAsync">
+            <summary>
+            查询Article
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:URLBox.Controllers.AuthController.GetLoginAddressAsync">
+            <summary>
+            获取登录地址(GitHub)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:URLBox.Controllers.AuthController.GetAccessTokenAsync(System.String)">
+            <summary>
+            获取AccessToken
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:URLBox.Controllers.AuthController.GenerateTokenAsync(System.String)">
+            <summary>
+            登录成功，生成Token
+            </summary>
+            <param name="access_token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:URLBox.Controllers.TagController.GetArticleAsync">
+            <summary>
+            获取所有标签
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
