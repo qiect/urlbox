@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>true</ImplicitUsings>
+    <RootNamespace>URLBox</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.3" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\URLBox.Application.Caching\URLBox.Application.Caching.csproj" />
+    <ProjectReference Include="..\URLBox.Application.Contracts\URLBox.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
