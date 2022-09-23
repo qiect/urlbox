@@ -251,15 +251,11 @@ paket-files/
 .idea/
 *.sln.iml
 
-# Template
-src/Chet.Template.Web/Logs/*
-src/Chet.Template.Web.Host/Logs/*
-src/Chet.Template.IdentityServer/Logs/*
-src/Chet.Template.HttpApi.Host/Logs/*
-src/Chet.Template.HttpApi.HostWithIds/Logs/*
-src/Chet.Template.DbMigrator/Logs/*
-src/Chet.Template.Blazor.Server/Logs/*
-src/Chet.Template.Blazor.Server.Tiered/Logs/*
-
 # Use abp install-libs to restore.
 **/wwwroot/libs/*
+
+# VS Code
+src/URLBox.Web/node_modules/
+src/URLBox.Web/*.DS_Store
+src/URLBox.Web/npm-debug.log
+src/URLBox.Web/*.vs

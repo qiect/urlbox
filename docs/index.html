@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Box</title>
+    <meta property="og:image" content="img/touch-icon.png">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="收录你喜欢的网址！">
+    <meta name="keywords" content="收录,网址">
+    <link rel="apple-touch-icon" href="img/touch-icon.png">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/index.css?d=1460130981801"/>
+</head>
+<body>
+    <header class="header">
+        <a href="./" class="logo"><h1>URL Box</h1></a>
+        <div class="right">
+            <div class="box"><span class="info" id="info"></span><a href="#">我来添加</a>  | <span class="preview" id="preview"><i class="view-type-list"></i></span></div>
+            
+        </div>
+    </header>
+    <div class="search">
+        <canvas class="spinner" width="30" height="30" id="spinner"></canvas>
+        <input type="text" id="search" placeholder="搜索。输入冒号，搜索标签。" accesskey="s">
+    </div>
+    <div class="sitelist">
+        <div id="error" class="error hide">
+            <h2 data-text="title">没有结果</h2>
+            <p data-text="msg">抱歉，没有查询到结果！可以再试一次~</p>
+        </div>
+        <div id="tags">
+            
+        </div>
+        <ul id="list-itme" class=""></ul>
+        <!-- <div class="more"><a href="javascript:;">更多网站</a></div> -->
+    </div>
+    <script type="text/javascript" src="js/index.min.js?d=1460130981801"></script>
+</body>
+</html>
