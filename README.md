@@ -1,37 +1,34 @@
-# Chet.Template
+# URL Box（网址盒子）
 
 #### 介绍
-创建一个简洁的ABP框架模板
+收录你喜欢的网址
 
 #### 软件架构
-软件架构说明
+Web（网站）: HTML+CSS+JS
 
+BrowserExt（浏览器扩展）: vue、ant-design-vue、axios
+
+API（接口服务）：.Net6.0、Abp vNet、Chet.Template
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  URLBox.Web
+	<ul>
+	<li>npm run build 构建脚本后部署</li>
+	<li>未完待续。</li>
+	</ul>
+2.  URLBox.BowserExt
+	<ul>
+	<li>npm run build => dist 目录</li>
+	<li>Edge管理扩展，加载解压缩的扩展</li>
+	<li>使用URLBox扩展</li>
+	</ul>
+	
+3.  部署API服务
+	自行查阅。
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1.  使用URLBox浏览器扩展收录网址
+2.  在URLBox网站检索已添加的网址，通过关键字或标签搜索。
+3.  点击内容标题跳转。
