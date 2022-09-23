@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-items", "solution-items", "{8B0D212A-47F1-40DF-8426-B8ADC068DB29}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CA9AC87F-097E-4F15-8393-4BC07735A5B0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "URLBox.Application", "src\URLBox.Application\URLBox.Application.csproj", "{1A94A50E-06DC-43C1-80B5-B662820EC3EB}"
@@ -30,6 +28,15 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "URLBox.ToolKits", "src\URLBox.ToolKits\URLBox.ToolKits.csproj", "{5188F936-04CE-46B6-A0A9-2B38A79D28F6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "URLBox.BackgroundJobs", "src\URLBox.BackgroundJobs\URLBox.BackgroundJobs.csproj", "{2D4B1741-E783-4E2F-AEA5-408356C586D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-items", "solution-items", "{8B0D212A-47F1-40DF-8426-B8ADC068DB29}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.github\workflows\Sync-Gitee.yml = .github\workflows\Sync-Gitee.yml
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
