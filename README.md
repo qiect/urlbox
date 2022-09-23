@@ -32,3 +32,4 @@ API（接口服务）：.Net6.0、Abp vNet、Chet.Template
 1.  使用URLBox浏览器扩展收录网址
 2.  在URLBox网站检索已添加的网址，通过关键字或标签搜索。
 3.  点击内容标题跳转。
+
