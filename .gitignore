@@ -254,8 +254,15 @@ paket-files/
 # Use abp install-libs to restore.
 **/wwwroot/libs/*
 
-# VS Code
+# URLBox.Web
 src/URLBox.Web/node_modules/
-src/URLBox.Web/*.DS_Store
-src/URLBox.Web/npm-debug.log
+src/URLBox.Web/.DS_Store
+src/URLBox.Web/npm-debug.log*
 src/URLBox.Web/*.vs
+
+# URLBox.BrowserExt
+src/URLBox.BrowserExt/node_modules/
+src/URLBox.BrowserExt/.DS_Store
+src/URLBox.BrowserExt/npm-debug.log*
+src/URLBox.BrowserExt/dist
+src/URLBox.BrowserExt/*.vs
