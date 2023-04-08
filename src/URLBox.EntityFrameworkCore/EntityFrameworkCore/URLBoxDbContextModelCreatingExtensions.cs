@@ -29,6 +29,22 @@ namespace URLBox.EntityFrameworkCore
                 p.ToTable(URLBoxConsts.DbTablePrefix + DbTableName.Tags);
                 p.Property(p => p.Name).HasMaxLength(50).IsRequired();
             });
+            builder.Entity<User>(p =>
+            {
+                p.ToTable(URLBoxConsts.DbTablePrefix + DbTableName.Users);
+                p.Property(p => p.PhoneNum).HasMaxLength(20).IsUnicode(false);
+                p.Property(p=>p.Email).HasMaxLength(50);
+                p.Property(p=>p.EmailStatus).HasMaxLength(10);
+                p.Property(p=>p.VCode).HasMaxLength(10);
+                p.Property(p => p.PasswordHash).HasMaxLength(100);
+                p.Property(p => p.PasswordSalt).HasMaxLength(20);
+                p.Property(p => p.QQOpenId).HasMaxLength(100);
+                p.Property(p => p.Name).HasMaxLength(50);
+                p.Property(p => p.Avatar).HasMaxLength(500);
+                p.Property(p => p.Gender).HasMaxLength(10);
+                p.Property(p => p.LastLoginIP).HasMaxLength(50);
+                p.HasQueryFilter(p => !p.IsDeleted);
+            });
         }
     }
 }

@@ -33,24 +33,11 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:URLBox.Controllers.AuthController.GetLoginAddressAsync">
+        <member name="M:URLBox.Controllers.HomeController.Index(System.String,System.String)">
             <summary>
-            获取登录地址(GitHub)
+            查询Article
             </summary>
-            <returns></returns>
-        </member>
-        <member name="M:URLBox.Controllers.AuthController.GetAccessTokenAsync(System.String)">
-            <summary>
-            获取AccessToken
-            </summary>
-            <param name="code"></param>
-            <returns></returns>
-        </member>
-        <member name="M:URLBox.Controllers.AuthController.GenerateTokenAsync(System.String)">
-            <summary>
-            登录成功，生成Token
-            </summary>
-            <param name="access_token"></param>
+            <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:URLBox.Controllers.TagController.GetArticleAsync">

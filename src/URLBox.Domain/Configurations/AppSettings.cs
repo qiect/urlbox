@@ -47,39 +47,6 @@ namespace URLBox.Configurations
         public static class App
         {
             public static string CorsOrigins => _config["App:CorsOrigins"];
-        } 
-        #endregion
-
-        #region GitHub
-        /// <summary>
-        /// GitHub
-        /// </summary>
-        public static class GitHub
-        {
-            public static int UserId => Convert.ToInt32(_config["Github:UserId"]);
-
-            public static string Client_ID => _config["Github:ClientID"];
-
-            public static string Client_Secret => _config["Github:ClientSecret"];
-
-            public static string Redirect_Uri => _config["Github:RedirectUri"];
-
-            public static string ApplicationName => _config["Github:ApplicationName"];
-        }
-        #endregion
-
-        #region JWT
-        public static class JWT
-        {
-            public static string Domain => _config["JWT:Domain"];
-            /// <summary>
-            /// 随便用编码工具进行生成
-            /// </summary>
-            public static string SecurityKey => _config["JWT:SecurityKey"];
-            /// <summary>
-            /// token过期时间
-            /// </summary>
-            public static int Expires => Convert.ToInt32(_config["JWT:Expires"]);
         }
         #endregion
 
@@ -107,7 +74,21 @@ namespace URLBox.Configurations
             public static string Password => _config["Hangfire:Password"];
         }
         #endregion
-    }
 
+        #region Authentication
+        /// <summary>
+        /// 身份认证
+        /// </summary>
+        public static class Authentication
+        {
+            public static class QQ
+            {
+                public static string AppId => _config["Authentication:QQ:AppId"];
+                public static string AppKey => _config["Authentication:QQ:AppKey"];
+            }
+            public static string LoginExpires => _config["Authentication:LoginExpires"];
+        }
+        #endregion
+    }
 
 }

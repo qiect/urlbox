@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 using Swashbuckle.AspNetCore.SwaggerUI;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
 namespace URLBox.Swagger
 {
@@ -36,17 +37,6 @@ namespace URLBox.Swagger
                     Title = "URLBox - 后台接口",
                     Description = description
                 }
-            },
-            new SwaggerApiInfo
-            {
-                UrlPrefix = Grouping.GroupName_JWT,
-                Name = "JWT授权接口",
-                OpenApiInfo = new OpenApiInfo
-                {
-                    Version = version,
-                    Title = "URLBox - JWT授权接口",
-                    Description = description
-                }
             }
         };
 
@@ -68,25 +58,11 @@ namespace URLBox.Swagger
                 // 应用Controller的API文档描述信息
                 //options.DocumentFilter<SwaggerDocumentFilter>();
 
-                #region 小绿锁，JWT身份认证配置
-                var security = new OpenApiSecurityScheme
-                {
-                    Description = "JWT模式授权，请输入 Bearer {Token} 进行身份验证",
-                    Name = "Authorization",
-                    In = ParameterLocation.Header,
-                    Type = SecuritySchemeType.ApiKey
-                };
-
-                options.AddSecurityDefinition("oauth2", security);
-                options.AddSecurityRequirement(new OpenApiSecurityRequirement { { security, new List<string>() } });
-                options.OperationFilter<AddResponseHeadersFilter>();
-                options.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();
-                options.OperationFilter<SecurityRequirementsOperationFilter>();
-                #endregion
-
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "URLBox.HttpApi.xml"));
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "URLBox.Domain.xml"));
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "URLBox.Application.Contracts.xml"));
+
+                options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
             });
         }
 

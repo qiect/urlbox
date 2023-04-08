@@ -20,6 +20,9 @@ using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc.ExceptionHandling;
 using Volo.Abp.Autofac;
 using Volo.Abp.Modularity;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.QQ;
+using Microsoft.AspNetCore.Authentication;
 
 namespace URLBox.Web;
 
@@ -29,7 +32,6 @@ namespace URLBox.Web;
        typeof(URLBoxHttpApiModule),
        typeof(URLBoxSwaggerModule),
        typeof(URLBoxEntityFrameworkCoreModule)
-    //typeof(TemplateBackgroundJobsModule)
     )]
 public class URLBoxHttpApiHostingModule : AbpModule
 {
@@ -37,23 +39,6 @@ public class URLBoxHttpApiHostingModule : AbpModule
 
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        // 身份验证
-        context.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-               .AddJwtBearer(options =>
-               {
-                   options.TokenValidationParameters = new TokenValidationParameters
-                   {
-                       ValidateIssuer = true,//是否验证颁发者
-                       ValidateAudience = true,//是否验证访问群体
-                       ValidateLifetime = true,//是否验证生存期
-                       ClockSkew = TimeSpan.FromSeconds(30),//验证Token的时间偏移量
-                       ValidateIssuerSigningKey = true,//是否验证安全密钥
-                       ValidAudience = AppSettings.JWT.Domain,//访问群体
-                       ValidIssuer = AppSettings.JWT.Domain,//颁发者
-                       IssuerSigningKey = new SymmetricSecurityKey(AppSettings.JWT.SecurityKey.GetBytes())//安全密钥
-                   };
-               });
-
         // 认证授权
         context.Services.AddAuthorization();
 
@@ -99,12 +84,23 @@ public class URLBoxHttpApiHostingModule : AbpModule
             });
         });
 
-        //context.Services.Configure<ForwardedHeadersOptions>(options =>
-        //{
-        //    options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
-        //    options.KnownNetworks.Clear();
-        //    options.KnownProxies.Clear();
-        //});
+        //身份认证
+        context.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    //这里填写一些配置信息，默认即可
+                })    //添加Cookie认证
+                .AddQQ(qqOptions =>
+                {
+                    qqOptions.AppId = AppSettings.Authentication.QQ.AppId;    //QQ互联申请的AppId
+                    qqOptions.AppKey = AppSettings.Authentication.QQ.AppKey;    //QQ互联申请的AppKey
+                    qqOptions.CallbackPath = "/home/index";    //QQ互联回调地址
+                                                               //自定义认证声明
+                    qqOptions.ClaimActions.MapJsonKey(MyClaimTypes.QQOpenId, "openid");
+                    qqOptions.ClaimActions.MapJsonKey(MyClaimTypes.QQName, "nickname");
+                    qqOptions.ClaimActions.MapJsonKey(MyClaimTypes.QQFigure, "figureurl_qq_1");
+                    qqOptions.ClaimActions.MapJsonKey(MyClaimTypes.QQGender, "gender");
+                });
     }
 
     public override void OnApplicationInitialization(ApplicationInitializationContext context)

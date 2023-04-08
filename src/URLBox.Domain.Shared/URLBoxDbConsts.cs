@@ -12,6 +12,7 @@ namespace URLBox
         {
             public const string Articles = "Articles";
             public const string Tags = "Tags";
+            public const string Users = "Users";
         }
     }
 }

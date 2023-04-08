@@ -29,5 +29,85 @@
             标签
             </summary>
         </member>
+        <member name="P:URLBox.UserDto.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.PhoneNum">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.Email">
+            <summary>
+            邮箱
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.EmailStatus">
+            <summary>
+            邮箱状态
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.VCode">
+            <summary>
+            邮箱验证码
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.LoginErrorTimes">
+            <summary>
+            登录错误次数
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.LastLoginErrorDateTime">
+            <summary>
+            最后一次登录错误时间
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.QQOpenId">
+            <summary>
+            QQOpenId
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.Name">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.LastLoginIP">
+            <summary>
+            最后一次登录IP
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.LastLoginTime">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.CreateDateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:URLBox.UserDto.DeletedDateTime">
+            <summary>
+            删除时间
+            </summary>
+        </member>
     </members>
 </doc>
