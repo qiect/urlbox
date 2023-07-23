@@ -307,7 +307,7 @@
             var self = this;
             this.loadingEml.style.display = 'block';
             this.loading();
-            this.ajax('https://haowen.link/article', function (dt) {
+            this.ajax('https://chetpro.top/article', function (dt) {
                 self.loadingEml.style.display = 'none';
                 self.data = JSON.parse(dt.result);
                 self.info.innerHTML =
